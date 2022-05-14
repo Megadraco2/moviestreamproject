@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-[#09090A] text-zinc-100;
+    @apply font-bahns;
+}
+
+.scrollbarStyle {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 1.25rem;
+}
+
+.scrollbarStyle::-webkit-scrollbar {
+    display: none;
+}
