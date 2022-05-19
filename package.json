@@ -5,7 +5,7 @@
   "homepage": "https://megadraco2.github.io/moviestreamproject/",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
