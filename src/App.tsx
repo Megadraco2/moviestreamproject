@@ -4,6 +4,7 @@ import { Nav } from './components/Nav'
 import { Row } from './components/Row'
 import categories, { getMovies } from './services/api'
 
+
 export function App() {
   const [count, setCount] = useState(0)
 

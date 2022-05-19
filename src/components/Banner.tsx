@@ -3,11 +3,11 @@ import categories, { getMovies } from "../services/api";
 
 
 export function Banner() {
-    const [movie,  setMovie] = useState({});
+    const [movie,  setMovie] : any = useState({});
 
     const fetchRandomMovie = async () => {
         try {
-            const netflixOriginalsCategory = categories.find(
+            const netflixOriginalsCategory : any = categories.find(
                 (category) => category.name === "netflixOriginals"
             );
             const data = await getMovies(netflixOriginalsCategory.path);
@@ -24,7 +24,7 @@ export function Banner() {
       fetchRandomMovie();
     }, []);
 
-    function truncate(str, n) {
+    function truncate(str : String, n : any)  {
         return str?.length > n ? str.substring(0, n - 1) + "..." : str;
     }
     
