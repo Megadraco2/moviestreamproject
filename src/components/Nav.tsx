@@ -1,6 +1,7 @@
 import { MagnifyingGlass } from "phosphor-react";
 import React, { useEffect, useState } from "react";
 import perfilImage from "../assets/perfil3.png";
+import { searchMovies } from "../services/api";
 import { SearchBar } from "./SearchBar";
 
 export function Nav() {
@@ -23,10 +24,6 @@ export function Nav() {
         alt="Logo"
       />
 
-      
-      <SearchBar/>
-
-      
       <div>
         <a href="https://github.com/Megadraco2">
           <img

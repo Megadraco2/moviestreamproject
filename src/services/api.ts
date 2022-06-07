@@ -46,6 +46,12 @@ const categories = [
     },
 ];
 
+const MovieResults = [
+    {
+        results: "results"
+    }
+];
+
 export const getMovies = async (path: String) => {
     try {
         let url = `https://api.themoviedb.org/3${path}`;
@@ -56,5 +62,16 @@ export const getMovies = async (path: String) => {
         console.log("error getMovies:", error)
     }
 }
+
+export const searchMovies = async (query: String) => {
+    try {
+        let url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=pt-BR&query=${query}&page=1&include_adult=false`
+        const response = await fetch(url);
+        return await response.json();
+    }catch(error) {
+        console.log("error searchMovies:", error)
+    }
+}
+
 
 export default categories;
