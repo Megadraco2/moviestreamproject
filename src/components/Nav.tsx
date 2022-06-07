@@ -1,6 +1,7 @@
 import { MagnifyingGlass } from "phosphor-react";
 import React, { useEffect, useState } from "react";
 import perfilImage from "../assets/perfil3.png";
+import { SearchBar } from "./SearchBar";
 
 export function Nav() {
   const [show, setShow] = useState(false);
@@ -23,16 +24,13 @@ export function Nav() {
       />
 
       
-      <div className="fixed right-28 top-5 w-64 flex justify-between items-center object-contain">
-        <input type="text" name="search" className="bg-zinc-600 bg-opacity-50 p-1 border-b-white border-opacity-50 border-b-2 focus:border-opacity-100 focus:outline-none transition-colors" />
-        <button type="submit" className="w-10 h-10 cursor-pointer bg-zinc-500 rounded-full flex justify-center items-center hover:bg-zinc-700 transition-all"><MagnifyingGlass/></button>
-      </div>
+      <SearchBar/>
 
       
       <div>
         <a href="https://github.com/Megadraco2">
           <img
-            className="fixed right-5 top-4 w-12 object-contain rounded-full cursor-pointer hover:opacity-50 transition-all"
+            className="fixed right-5 top-2 w-12 object-contain rounded-full cursor-pointer hover:opacity-50 transition-all"
             src={perfilImage}
             alt="Megadraco2"
           />
